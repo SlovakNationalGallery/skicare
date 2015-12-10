@@ -1,0 +1,62 @@
+body,
+input,
+select,
+textarea,
+button {
+  font-family: 'Fugue', sans-serif;
+}
+
+/*.ready {
+    display: none;
+}
+
+body.initialized .ready {
+    display: block;
+}
+*/
+
+body.initialized .loading {
+    display: none;
+}
+
+
+
+a, a:hover, a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+.img-responsive {
+display: block;
+height: 100%;
+width: auto;
+margin-right: 15px;
+}
+
+#skicare {
+display: -webkit-box;
+display: -webkit-flex;
+display: flex;
+  align-items: center;
+  /*justify-content: center;*/
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  height:90%;
+         position:absolute;
+         top: -0px;
+         width:100%;
+         padding: 20px;
+}
+#skicare .skicar {
+  display: block;
+  margin: auto 10px;
+  /*flex:1;*/
+   -webkit-flex: none;
+  flex:none;
+}
+.big {
+font-size: 56px;
+}
+.big, .title { margin-left: 2px;}
+.title { line-height: 35px;}
