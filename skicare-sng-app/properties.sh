@@ -13,4 +13,4 @@ PLATFORM="ios"
 # multiplatform
 # PLATFORMS=("android" "ios")
 PLATFORMS=("ios")
-CORDOVA_VERSION="3.6.3"
+# CORDOVA_VERSION="3.6.3"

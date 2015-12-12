@@ -4,7 +4,7 @@
 source properties.sh
 
 # create build dir
-mkdir build
+# mkdir build
 
 # go to build dir
 cd build
@@ -23,12 +23,14 @@ cordova plugin add org.apache.cordova.console
 cordova plugin add org.apache.cordova.device
 cordova plugin add org.apache.cordova.file@1.3.1
 cordova plugin add org.apache.cordova.file-transfer
+cordova plugin add cordova-plugin-media
 cordova plugin add $PLUGIN_URL
 
 # add platform
 for p in "${PLATFORMS[@]}"
 do
-	cordova platform add $p@$CORDOVA_VERSION
+	# cordova platform add $p@$CORDOVA_VERSION
+	cordova platform add $p
 done
 
 # go to root dir
