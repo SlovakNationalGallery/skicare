@@ -332,7 +332,8 @@
 
 		_pageCount = [decoder decodeObjectForKey:@"PageCount"];
 
-		_pageNumber = [decoder decodeObjectForKey:@"PageNumber"];
+		// _pageNumber = [decoder decodeObjectForKey:@"PageNumber"];
+		_pageNumber = [NSNumber numberWithInteger:1];
 
 		_bookmarks = [decoder decodeObjectForKey:@"Bookmarks"];
 
