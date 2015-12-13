@@ -32,13 +32,13 @@ function getOptions(provided)
     if (!options.documentView)
         options.documentView = {};
     if (!options.documentView.closeLabel)
-        options.documentView.closeLabel = "Done";
+        options.documentView.closeLabel = "X";
 
 
     if (!options.navigationView)
         options.navigationView = {};
     if (!options.navigationView.closeLabel)
-        options.navigationView.closeLabel = "Back";
+        options.navigationView.closeLabel = "X";
 
 
     if (!options.email)
