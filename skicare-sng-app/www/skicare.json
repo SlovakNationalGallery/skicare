@@ -5,7 +5,8 @@
     "width": "10.50",
     "height": "14.40",
     "file": "1-eugen-nevan-1960.pdf",
-    "preview": "SVK_SNG.K_5827.jpeg"
+    "preview": "SVK_SNG.K_5827.jpeg",
+    "sound" : "medn2_mixdown.mp3"
   },
   {
     "item_id": "SVK:SNG.IM_358-A6-Z1",
@@ -13,7 +14,8 @@
     "width": "10.50",
     "height": "14.80",
     "file": "2-julius-koller-1983.pdf",
-    "preview": "SVK_SNG.IM_358-A6-Z1.jpeg"
+    "preview": "SVK_SNG.IM_358-A6-Z1.jpeg",
+    "sound" : "drawpencil4b.mp3"
   },
   {
     "item_id": "SVK:SNG.K_10506",
@@ -21,7 +23,8 @@
     "width": "18.50",
     "height": "11.80",
     "file": "3-margita-czobelova-1972.pdf",
-    "preview": "SVK_SNG.K_10506.jpeg"
+    "preview": "SVK_SNG.K_10506.jpeg",
+    "sound" : "Vochor3.mp3"
   },
   {
     "item_id": "SVK:SNG.K_13138",
@@ -29,7 +32,8 @@
     "width": "22.60",
     "height": "15.90",
     "file": "4-milos-alexander-bazovsky-1940.pdf",
-    "preview": "SVK_SNG.K_13138.jpeg"
+    "preview": "SVK_SNG.K_13138.jpeg",
+    "sound" : "AnCha 04.mp3"
   },
   {
     "item_id": "SVK:SNG.K_17437",
@@ -37,7 +41,8 @@
     "width": "17.00",
     "height": "19.80",
     "file": "5-mikulas-galanda-1937.pdf",
-    "preview": "SVK_SNG.K_17437.jpeg"
+    "preview": "SVK_SNG.K_17437.jpeg",
+    "sound" : "cos8soundscape.mp3"
   },
   {
     "item_id": "SVK:SNG.K_18447",
@@ -45,7 +50,8 @@
     "width": "20.00",
     "height": "29.70",
     "file": "6-rudolf-sikora-1980.pdf",
-    "preview": "SVK_SNG.K_18447.jpeg"
+    "preview": "SVK_SNG.K_18447.jpeg",
+    "sound" : "firetest.mp3"
   },
   {
     "item_id": "SVK:SNG.K_2813",
@@ -53,7 +59,8 @@
     "width": "30.00",
     "height": "21.50",
     "file": "7-stefan-polkorab-1939.pdf",
-    "preview": "SVK_SNG.K_2813.jpeg"
+    "preview": "SVK_SNG.K_2813.jpeg",
+    "sound" : "5mmspace.mp3"
   },
   {
     "item_id": "SVK:SNG.K_2814",
@@ -61,7 +68,8 @@
     "width": "29.80",
     "height": "30.50",
     "file": "8-stefan-polkorab-1950.pdf",
-    "preview": "SVK_SNG.K_2814.jpeg"
+    "preview": "SVK_SNG.K_2814.jpeg",
+    "sound" : "skice2_mixdown.mp3"
   },
   {
     "item_id": "SVK:SNG.K_5828",
@@ -69,7 +77,8 @@
     "width": "10.00",
     "height": "14.80",
     "file": "9-eugen-nevan-1960.pdf",
-    "preview": "SVK_SNG.K_5828.jpeg"
+    "preview": "SVK_SNG.K_5828.jpeg",
+    "sound" : "medn2_mixdown.mp3"
   },
   {
     "item_id": "SVK:SNG.K_5930",
@@ -77,7 +86,8 @@
     "width": "9.00",
     "height": "14.50",
     "file": "10-ernest-spitz-1960.pdf",
-    "preview": "SVK_SNG.K_5930.jpeg"
+    "preview": "SVK_SNG.K_5930.jpeg",
+    "sound" : "drawpencil4b.mp3"
   },
   {
     "item_id": "SVK:SNG.K_7866",
@@ -85,7 +95,8 @@
     "width": "12.50",
     "height": "16.00",
     "file": "11-ivan-zabota-2000.pdf",
-    "preview": "SVK_SNG.K_7866.jpeg"
+    "preview": "SVK_SNG.K_7866.jpeg",
+    "sound" : "Vochor3.mp3"
   },
   {
     "item_id": "SVK:SNG.K_952",
@@ -93,7 +104,8 @@
     "width": "29.60",
     "height": "21.20",
     "file": "12-arnold-peter-weisz-kubincan-1935.pdf",
-    "preview": "SVK_SNG.K_952.jpeg"
+    "preview": "SVK_SNG.K_952.jpeg",
+    "sound" : "AnCha 04.mp3"
   },
   {
     "item_id": "SVK:SNG.K_1772_-_K_1781",
@@ -101,7 +113,8 @@
     "width": "21.00",
     "height": "30.00",
     "file": "13-milan-thomka-mitrovsky-1898.pdf",
-    "preview": "SVK_SNG.K_1772_-_K_1781.jpeg"
+    "preview": "SVK_SNG.K_1772_-_K_1781.jpeg",
+    "sound" : "cos8soundscape.mp3"
   },
   {
     "item_id": "SVK:SNG.K_1782_-_K_1808",
@@ -109,7 +122,8 @@
     "width": "21.00",
     "height": "30.00",
     "file": "14-milan-thomka-mitrovsky-1916.pdf",
-    "preview": "SVK_SNG.K_1782_-_K_1808.jpeg"
+    "preview": "SVK_SNG.K_1782_-_K_1808.jpeg",
+    "sound" : "firetest.mp3"
   },
   {
     "item_id": "SVK:SNG.K_1031",
@@ -117,7 +131,8 @@
     "width": "27.90",
     "height": "19.20",
     "file": "15-jaroslav-augusta-1920.pdf",
-    "preview": "SVK_SNG.K_1031.jpeg"
+    "preview": "SVK_SNG.K_1031.jpeg",
+    "sound" : "5mmspace.mp3"
   },
   {
     "item_id": "SVK:SNG.K_2012",
@@ -125,7 +140,8 @@
     "width": "29.10",
     "height": "19.90",
     "file": "16-jan-novak-1944.pdf",
-    "preview": "SVK_SNG.K_2012.jpeg"
+    "preview": "SVK_SNG.K_2012.jpeg",
+    "sound" : "skice2_mixdown.mp3"
   },
   {
     "item_id": "SVK:SNG.K_7410",
@@ -133,7 +149,8 @@
     "width": "21.00",
     "height": "25.40",
     "file": "17-cyprian-majernik-1932.pdf",
-    "preview": "SVK_SNG.K_7410.jpeg"
+    "preview": "SVK_SNG.K_7410.jpeg",
+    "sound" : "medn2_mixdown.mp3"
   },
   {
     "item_id": "SVK:SNG.K_3211",
@@ -141,7 +158,8 @@
     "width": "20.70",
     "height": "14.70",
     "file": "18-mikulas-galanda-1938.pdf",
-    "preview": "SVK_SNG.K_3211.jpeg"
+    "preview": "SVK_SNG.K_3211.jpeg",
+    "sound" : "drawpencil4b.mp3"
   },
   {
     "item_id": "SVK:SNG.K_5734",
@@ -149,7 +167,8 @@
     "width": "27.50",
     "height": "21.00",
     "file": "19-ernest-spitz-1960.pdf",
-    "preview": "SVK_SNG.K_5734.jpeg"
+    "preview": "SVK_SNG.K_5734.jpeg",
+    "sound" : "Vochor3.mp3"
   },
   {
     "item_id": "SVK:SNG.K_5924",
@@ -157,7 +176,8 @@
     "width": "14.70",
     "height": "22.30",
     "file": "20-ernest-spitz-1960.pdf",
-    "preview": "SVK_SNG.K_5924.jpeg"
+    "preview": "SVK_SNG.K_5924.jpeg",
+    "sound" : "AnCha 04.mp3"
   },
   {
     "item_id": "SVK:SNG.K_13768_-_K_13798",
@@ -165,7 +185,8 @@
     "width": "29.00",
     "height": "21.30",
     "file": "21-maximilian-schurmann-1914.pdf",
-    "preview": "SVK_SNG.K_13768_-_K_13798.jpeg"
+    "preview": "SVK_SNG.K_13768_-_K_13798.jpeg",
+    "sound" : "cos8soundscape.mp3"
   },
   {
     "item_id": "SVK:SNG.K_7610",
@@ -173,7 +194,8 @@
     "width": "21.40",
     "height": "29.90",
     "file": "22-dezider-milly-1960.pdf",
-    "preview": "SVK_SNG.K_7610.jpeg"
+    "preview": "SVK_SNG.K_7610.jpeg",
+    "sound" : "firetest.mp3"
   },
   {
     "item_id": "SVK:SNG.K_18690",
@@ -181,7 +203,8 @@
     "width": "23.50",
     "height": "28.80",
     "file": "23-andrej-dubravsky-2013.pdf",
-    "preview": "SVK_SNG.K_18690.jpeg"
+    "preview": "SVK_SNG.K_18690.jpeg",
+    "sound" : "5mmspace.mp3"
   },
   {
     "item_id": "SVK:SNG.K_6937",
@@ -189,7 +212,8 @@
     "width": "19.50",
     "height": "13.50",
     "file": "24-alojz-rigele-1900.pdf",
-    "preview": "SVK_SNG.K_6937.jpeg"
+    "preview": "SVK_SNG.K_6937.jpeg",
+    "sound" : "skice2_mixdown.mp3"
   },
   {
     "item_id": "SVK:SNG.K_12084",
@@ -197,7 +221,8 @@
     "width": "22.10",
     "height": "14.90",
     "file": "25-ladislav-mednyanszky-1910.pdf",
-    "preview": "SVK_SNG.K_12084.jpeg"
+    "preview": "SVK_SNG.K_12084.jpeg",
+    "sound" : "skice2_mixdown.mp3"
   },
   {
     "item_id": "SVK:SNG.K_12096",
@@ -205,7 +230,8 @@
     "width": "19.50",
     "height": "13.50",
     "file": "26-ladislav-mednyanszky-1910.pdf",
-    "preview": "SVK_SNG.K_12096.jpeg"
+    "preview": "SVK_SNG.K_12096.jpeg",
+    "sound" : "skice2_mixdown.mp3"
   },
   {
     "item_id": "SVK:SNG.K_5495-1-55",
@@ -213,6 +239,7 @@
     "width": "20.90",
     "height": "28.80",
     "file": "27-ervin-semian-1960.pdf",
-    "preview": "SVK_SNG.K_5495-1-55.jpeg"
+    "preview": "SVK_SNG.K_5495-1-55.jpeg",
+    "sound" : "skice2_mixdown.mp3"
   }
 ]

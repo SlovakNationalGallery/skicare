@@ -42,7 +42,7 @@ function createList(sourceFile, listId) {
         $a.addClass('skicar');
         var height = (skicar.height / maxHeight) * 85;
         $a.css("height", height + '%');
-        $a.click(createDocumentOpener('sketchbooks/' + skicar.file));
+        $a.click(createDocumentOpener('sketchbooks/' + skicar.file, skicar.sound));
 
         var listItem = '';
         listItem += '<span class="big">#'+(index+1)+'</span><br>' +
@@ -55,15 +55,15 @@ function createList(sourceFile, listId) {
 
 }
 
-function createDocumentOpener(file)
+function createDocumentOpener(file, sound)
 {
     return function ()
     {
-        return viewDocument(file)
+        return viewDocument(file, sound)
     };
 }
 
-function viewDocument(url)
+function viewDocument(url, sound)
 {
     window.console.log("Attempting to view '" + url + "'");
 
@@ -75,15 +75,15 @@ function viewDocument(url)
             {
                 // shown
                 window.console.log('document shown');
-                media = new Media( "/sounds/vianoce.mp3", function() {
+                media = new Media( "/sounds/"+sound, function() {
                         console.log('Media file readed succesfully');
                      },
                      function(error) {
                         console.log('Unable to read the media file.');
                      }
-                  );
+                );
+                media.play({ numberOfLoops: 10 });
 
-                media.play();
             },
             function ()
             {
