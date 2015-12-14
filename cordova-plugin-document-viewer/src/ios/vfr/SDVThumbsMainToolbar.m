@@ -64,7 +64,7 @@
         //get doneButtonText from options
         NSString *toolbarOptionCloseLabel = [[options objectForKey: @"navigationView"] objectForKey: @"closeLabel"];
         NSLog(@"[pdfviewer] toolbar-options close label: %@", toolbarOptionCloseLabel);
-        NSString *doneButtonText = toolbarOptionCloseLabel?:NSLocalizedString(@"Done", @"button");
+        NSString *doneButtonText = toolbarOptionCloseLabel?:NSLocalizedString(@"Nie", @"button");
         CGSize doneButtonSize = [doneButtonText sizeWithFont:doneButtonFont];
         CGFloat doneButtonWidth = (doneButtonSize.width + TEXT_BUTTON_PADDING);
         

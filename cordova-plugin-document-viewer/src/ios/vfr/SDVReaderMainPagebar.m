@@ -21,9 +21,9 @@
         NSInteger pages = [document.pageCount integerValue]; // Total pages
         
         //this is the line...
-        NSString *format = NSLocalizedString(@"%i / %i", @"format"); // Format
+        NSString *format = NSLocalizedString(@"%i", @"format"); // Format
         
-        NSString *number = [[NSString alloc] initWithFormat:format, (int)page, (int)pages];
+        NSString *number = [[NSString alloc] initWithFormat:format, (int)page];
         
         pageNumberLabel.text = number; // Update the page number label text
         

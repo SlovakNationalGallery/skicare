@@ -14,19 +14,20 @@
 #import "ReaderMainToolbar+SDVReaderMainToolbarPassThrough.h"
 
 #import <MessageUI/MessageUI.h>
+#import <QuartzCore/QuartzCore.h>
 
 @implementation SDVReaderMainToolbar
 
 #pragma mark - Constants
 
-#define BUTTON_X 8.0f
-#define BUTTON_Y 8.0f
+#define BUTTON_X 15.0f
+#define BUTTON_Y 15.0f
 
-#define BUTTON_SPACE 8.0f
-#define BUTTON_HEIGHT 30.0f
+#define BUTTON_SPACE 0.0f
+#define BUTTON_HEIGHT 50.0f //30
 
-#define BUTTON_FONT_SIZE 15.0f
-#define TEXT_BUTTON_PADDING 24.0f
+#define BUTTON_FONT_SIZE 35.0f //15
+#define TEXT_BUTTON_PADDING 0.0f //24
 
 #define SHOW_CONTROL_WIDTH 117.0f
 #define ICON_BUTTON_WIDTH 40.0f
@@ -113,6 +114,8 @@
         CGFloat titleX = BUTTON_X; CGFloat titleWidth = (viewWidth - (titleX + titleX));
         
         CGFloat leftButtonX = BUTTON_X; // Left-side button start X position
+        CGFloat rightButtonX = viewWidth - BUTTON_X - BUTTON_HEIGHT; // Right-side buttons start X position
+
         
 #if (READER_STANDALONE == FALSE) // Option
         
@@ -124,8 +127,25 @@
         CGSize doneButtonSize = [doneButtonText sizeWithFont:doneButtonFont];
         CGFloat doneButtonWidth = (doneButtonSize.width + TEXT_BUTTON_PADDING);
         
+        // UIImage *closeButton = [UIImage imageNamed:@"SDVReader-SinglePage"];
+        // UIImage *doneButton = [UIImage imageNamed:@"SDVReader-SinglePage"];
+        // UIImageView *imageview = [[UIImageView alloc]initWithFrame:CGRectMake(100.0, 100.0, 100.0, 100.0)];
+        //     [imageview setImage:[UIImage imageNamed:@"SDVReader-SinglePage"]];
+        //     [imageview setUserInteractionEnabled:YES];
+        //     UITapGestureRecognizer *singleTap =  [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doneButtonTapped:)];
+        //     [singleTap setNumberOfTapsRequired:1];
+        //     [imageview addGestureRecognizer:singleTap];
+        //     // [self.view addSubview:imageview];
+        //     [self addSubview:imageview];
+
         UIButton *doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        doneButton.frame = CGRectMake(leftButtonX, BUTTON_Y, doneButtonWidth, BUTTON_HEIGHT);
+        doneButton.frame = CGRectMake(rightButtonX, BUTTON_Y, BUTTON_HEIGHT, BUTTON_HEIGHT);
+        doneButton.contentVerticalAlignment =  UIControlContentVerticalAlignmentFill; //UIControlContentVerticalAlignmentTop; //UIControlContentVerticalAlignmentBottom;
+        doneButton.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 5, 0);
+        doneButton.layer.cornerRadius =25;
+        doneButton.layer.borderColor = [UIColor blackColor].CGColor;
+        doneButton.layer.borderWidth=2.0f;
+        // doneButton.clipsToBounds = YES;
         [doneButton setTitleColor:[UIColor colorWithWhite:0.0f alpha:1.0f] forState:UIControlStateNormal];
         [doneButton setTitleColor:[UIColor colorWithWhite:1.0f alpha:1.0f] forState:UIControlStateHighlighted];
         [doneButton setTitle:doneButtonText forState:UIControlStateNormal]; doneButton.titleLabel.font = doneButtonFont;
@@ -133,7 +153,7 @@
         [doneButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
         [doneButton setBackgroundImage:buttonN forState:UIControlStateNormal];
         doneButton.autoresizingMask = UIViewAutoresizingNone;
-        //doneButton.backgroundColor = [UIColor whiteColor];
+        doneButton.backgroundColor = [UIColor whiteColor];
         doneButton.exclusiveTouch = YES;
         
         [self addSubview:doneButton]; leftButtonX += (doneButtonWidth + buttonSpacing);
@@ -162,7 +182,7 @@
         }
 #endif // end of READER_ENABLE_THUMBS Option
         
-        CGFloat rightButtonX = viewWidth; // Right-side buttons start X position
+//        CGFloat rightButtonX = viewWidth; // Right-side buttons start X position
        
 #if (READER_BOOKMARKS == TRUE) // Option
         //get bookmarks enabled options
@@ -271,6 +291,8 @@
             }
         }
         
+        // UIImage *closeButton = [UIImage imageNamed:@"SDVReader-SinglePage"];
+
         //view modes
         UIImage *singlePageButton = [UIImage imageNamed:@"SDVReader-SinglePage"];
         UIImage *doublePageButton = [UIImage imageNamed:@"SDVReader-DoublePage"];

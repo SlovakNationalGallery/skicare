@@ -73,7 +73,8 @@
 		}
 		else // Follow The Fuglyosity of Flat Fad
 		{
-			self.backgroundColor = [UIColor colorWithWhite:0.94f alpha:0.94f];
+            self.backgroundColor = [UIColor colorWithWhite:1.00f alpha:0.00f];
+//            self.backgroundColor = [UIColor colorWithWhite:0.94f alpha:0.94f];
 
 			CGRect lineRect = self.bounds; lineRect.origin.y += lineRect.size.height; lineRect.size.height = 1.0f;
 
@@ -83,7 +84,7 @@
 			lineView.contentMode = UIViewContentModeRedraw;
 			lineView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 			lineView.backgroundColor = [UIColor colorWithWhite:0.64f alpha:0.94f];
-			[self addSubview:lineView];
+//			[self addSubview:lineView];
 		}
 	}
 

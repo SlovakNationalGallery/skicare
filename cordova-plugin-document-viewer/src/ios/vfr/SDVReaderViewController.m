@@ -24,7 +24,7 @@
 
 #define STATUS_HEIGHT 20.0f
 
-#define TOOLBAR_HEIGHT 44.0f
+#define TOOLBAR_HEIGHT 64.0f
 #define PAGEBAR_HEIGHT 48.0f
 
 #define SCROLLVIEW_OUTSET_SMALL 4.0f
@@ -1085,7 +1085,7 @@
 // show status bar
 - (BOOL)prefersStatusBarHidden
 {
-    return NO;
+    return YES;
 }
 
 //  https://github.com/etabard/Reader/commit/1001fcee4ccef5db329452dd59d5dfe48bdb783c

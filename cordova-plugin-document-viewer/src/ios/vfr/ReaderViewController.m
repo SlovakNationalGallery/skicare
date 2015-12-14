@@ -580,11 +580,12 @@
 				{
 					if ((mainToolbar.alpha < 1.0f) || (mainPagebar.alpha < 1.0f)) // Hidden
 					{
-						[mainToolbar showToolbar]; [mainPagebar showPagebar]; // Show
+						// [mainToolbar showToolbar]; [mainPagebar showPagebar]; // Show
 					}
 				}
 			}
 
+			[mainToolbar hideToolbar]; [mainPagebar hidePagebar]; // Hide
 			return;
 		}
 

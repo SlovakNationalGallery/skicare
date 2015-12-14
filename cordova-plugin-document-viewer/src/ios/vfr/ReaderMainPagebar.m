@@ -42,7 +42,7 @@
 #define THUMB_LARGE_HEIGHT 42
 
 #define PAGE_NUMBER_WIDTH 96.0f
-#define PAGE_NUMBER_HEIGHT 30.0f
+#define PAGE_NUMBER_HEIGHT 40.0f
 
 #define PAGE_NUMBER_SPACE_SMALL 16.0f
 #define PAGE_NUMBER_SPACE_LARGE 32.0f
@@ -155,7 +155,7 @@
 		}
 		else // Follow The Fuglyosity of Flat Fad
 		{
-			self.backgroundColor = [UIColor colorWithWhite:0.94f alpha:0.94f];
+            self.backgroundColor = [UIColor colorWithWhite:1.00f alpha:0.00f];
 
 			CGRect lineRect = self.bounds; lineRect.size.height = 1.0f; lineRect.origin.y -= lineRect.size.height;
 
@@ -165,7 +165,7 @@
 			lineView.contentMode = UIViewContentModeRedraw;
 			lineView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 			lineView.backgroundColor = [UIColor colorWithWhite:0.64f alpha:0.94f];
-			[self addSubview:lineView];
+//			[self addSubview:lineView];
 		}
 
 		CGFloat space = (([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) ? PAGE_NUMBER_SPACE_LARGE : PAGE_NUMBER_SPACE_SMALL);
@@ -177,12 +177,12 @@
 		pageNumberView.autoresizesSubviews = NO;
 		pageNumberView.userInteractionEnabled = NO;
 		pageNumberView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
-		pageNumberView.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.4f];
+//		pageNumberView.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.4f];
 
-		pageNumberView.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
-		pageNumberView.layer.shadowColor = [UIColor colorWithWhite:0.0f alpha:0.6f].CGColor;
-		pageNumberView.layer.shadowPath = [UIBezierPath bezierPathWithRect:pageNumberView.bounds].CGPath;
-		pageNumberView.layer.shadowRadius = 2.0f; pageNumberView.layer.shadowOpacity = 1.0f;
+//		pageNumberView.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
+//		pageNumberView.layer.shadowColor = [UIColor colorWithWhite:0.0f alpha:0.6f].CGColor;
+//		pageNumberView.layer.shadowPath = [UIBezierPath bezierPathWithRect:pageNumberView.bounds].CGPath;
+//		pageNumberView.layer.shadowRadius = 2.0f; pageNumberView.layer.shadowOpacity = 1.0f;
 
 		CGRect textRect = CGRectInset(pageNumberView.bounds, 4.0f, 2.0f); // Inset the text a bit
 
@@ -191,11 +191,12 @@
 		pageNumberLabel.autoresizesSubviews = NO;
 		pageNumberLabel.autoresizingMask = UIViewAutoresizingNone;
 		pageNumberLabel.textAlignment = NSTextAlignmentCenter;
-		pageNumberLabel.backgroundColor = [UIColor clearColor];
-		pageNumberLabel.textColor = [UIColor whiteColor];
-		pageNumberLabel.font = [UIFont systemFontOfSize:16.0f];
-		pageNumberLabel.shadowOffset = CGSizeMake(0.0f, 1.0f);
-		pageNumberLabel.shadowColor = [UIColor blackColor];
+        pageNumberLabel.backgroundColor = [UIColor clearColor];
+		pageNumberLabel.textColor = [UIColor blackColor];
+//        pageNumberLabel.font = [UIFont systemFontOfSize:32.0f];
+        pageNumberLabel.font = [UIFont fontWithName:@"Fugue" size:32];
+//		pageNumberLabel.shadowOffset = CGSizeMake(0.0f, 1.0f);
+//		pageNumberLabel.shadowColor = [UIColor blackColor];
 		pageNumberLabel.adjustsFontSizeToFitWidth = YES;
 		pageNumberLabel.minimumScaleFactor = 0.75f;
 
@@ -573,13 +574,14 @@
 	{
 		CGFloat value = (small ? 0.6f : 0.7f); // Size based alpha value
 
-		UIColor *background = [UIColor colorWithWhite:0.8f alpha:value];
+        UIColor *background = [UIColor colorWithWhite:1.0f alpha:0.0f];
+//        UIColor *background = [UIColor colorWithWhite:0.8f alpha:value];
 
 		self.backgroundColor = background; imageView.backgroundColor = background;
 
-		imageView.layer.borderColor = [UIColor colorWithWhite:0.4f alpha:0.6f].CGColor;
+//		imageView.layer.borderColor = [UIColor colorWithWhite:0.4f alpha:0.6f].CGColor;
 
-		imageView.layer.borderWidth = 1.0f; // Give the thumb image view a border
+//		imageView.layer.borderWidth = 1.0f; // Give the thumb image view a border
 	}
 
 	return self;
