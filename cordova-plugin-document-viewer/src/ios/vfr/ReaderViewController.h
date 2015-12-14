@@ -66,6 +66,8 @@
     NSDate *lastHideTime;
     
     BOOL ignoreDidScroll;
+    
+    NSTimer *idleTimer;
 }
 
 

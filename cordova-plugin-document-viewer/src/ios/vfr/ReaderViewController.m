@@ -52,6 +52,8 @@
 
 #define TAP_AREA_SIZE 48.0f
 
+#define kMaxIdleTimeSeconds 180.0 //3min
+
 #pragma mark - Properties
 
 @synthesize delegate;
@@ -296,6 +298,7 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
+    [self resetIdleTimer];
 
 	assert(document != nil); // Must have a valid ReaderDocument
 
@@ -490,7 +493,9 @@
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)recognizer shouldReceiveTouch:(UITouch *)touch
 {
-	if ([touch.view isKindOfClass:[UIScrollView class]]) return YES;
+    [self resetIdleTimer];
+    
+    if ([touch.view isKindOfClass:[UIScrollView class]]) return YES;
 
 	return NO;
 }
@@ -872,5 +877,39 @@
 
 	if (userInterfaceIdiom == UIUserInterfaceIdiomPad) if (printInteraction != nil) [printInteraction dismissAnimated:NO];
 }
+
+#pragma mark Handling idle timeout
+
+- (void)resetIdleTimer {
+    if (!idleTimer) {
+        idleTimer = [NSTimer scheduledTimerWithTimeInterval:kMaxIdleTimeSeconds
+                                                      target:self
+                                                    selector:@selector(idleTimerExceeded)
+                                                    userInfo:nil
+                                                     repeats:NO];
+    }
+    else {
+        if (fabs([idleTimer.fireDate timeIntervalSinceNow]) < kMaxIdleTimeSeconds-1.0) {
+            [idleTimer setFireDate:[NSDate dateWithTimeIntervalSinceNow:kMaxIdleTimeSeconds]];
+        }
+    }
+}
+
+- (void)idleTimerExceeded {
+    [idleTimer invalidate];
+    idleTimer = nil;
+    [self closeDocument]; // Close ReaderViewController
+    [self resetIdleTimer];
+}
+
+//- (UIResponder *)nextResponder {
+//    [self resetIdleTimer];
+//    return [super nextResponder];
+//}
+
+//- (void)viewDidLoad {
+//    [super viewDidLoad];
+//    [self resetIdleTimer];
+//}
 
 @end
