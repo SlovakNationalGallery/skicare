@@ -178,59 +178,59 @@
     NSString *key;
     // view initialisation depending on view mode and page
     switch (self.viewMode) {
-//        case SDVReaderContentViewModeDoublePage:
-//        {
-//            key = [NSString stringWithFormat:@"%ld-L",(long)page];// # key
-//            contentView = [contentViews objectForKey:key];
-//            if (contentView) {
-//                [contentView removeFromSuperview];
-//                [contentViews removeObjectForKey:key];
-//            }
-//            
-//            if (page < maximumPage) {
-//                contentView = [[SDVReaderContentViewDoublePage alloc] initWithFrame:viewRect fileURL:fileURL page:page password:phrase]; // ReaderContentView
-//            }
-//            //single last page
-//            else
-//            {
-//                //                contentView = [[ReaderContentView alloc] initWithFrame:viewRect fileURL:fileURL page:page password:phrase]; // ReaderContentView
-//                contentView = [[SDVReaderContentViewDoublePage alloc] initWithFrame:viewRect fileURL:fileURL page:page password:phrase mode:SDVReaderContentViewDoublePageModeLeft]; // ReaderContentView
-//            }
-//            break;
-//        }
-//        case SDVReaderContentViewModeCoverDoublePage:
-//        {
-//            key = [NSString stringWithFormat:@"%ld-LC",(long)page];// # key
-//            contentView = [contentViews objectForKey:key];
-//            if (contentView) {
-//                [contentView removeFromSuperview];
-//                [contentViews removeObjectForKey:key];
-//            }
-//            //first page and single last page
-//            if (page == 1)
-//            {
-//                //                contentView = [[ReaderContentView alloc] initWithFrame:viewRect fileURL:fileURL page:page password:phrase]; // ReaderContentView
-//                contentView = [[SDVReaderContentViewDoublePage alloc] initWithFrame:viewRect fileURL:fileURL page:page password:phrase mode:SDVReaderContentViewDoublePageModeRight]; // ReaderContentView
-//            }
-//            else if (page == maximumPage)
-//            {
-//                contentView = [[SDVReaderContentViewDoublePage alloc] initWithFrame:viewRect fileURL:fileURL page:page password:phrase mode:SDVReaderContentViewDoublePageModeLeft]; // ReaderContentView
-//            }
-//            else
-//            {
-//                contentView = [[SDVReaderContentViewDoublePage alloc] initWithFrame:viewRect fileURL:fileURL page:page password:phrase]; // ReaderContentView
-//            }
-//            break;
-//        }
+       case SDVReaderContentViewModeDoublePage:
+       {
+           key = [NSString stringWithFormat:@"%ld-L",(long)page];// # key
+           contentView = [contentViews objectForKey:key];
+           if (contentView) {
+               [contentView removeFromSuperview];
+               [contentViews removeObjectForKey:key];
+           }
+           
+           if (page < maximumPage) {
+               contentView = [[SDVReaderContentViewDoublePage alloc] initWithFrame:viewRect fileURL:fileURL page:page password:phrase]; // ReaderContentView
+           }
+           //single last page
+           else
+           {
+               //                contentView = [[ReaderContentView alloc] initWithFrame:viewRect fileURL:fileURL page:page password:phrase]; // ReaderContentView
+               contentView = [[SDVReaderContentViewDoublePage alloc] initWithFrame:viewRect fileURL:fileURL page:page password:phrase mode:SDVReaderContentViewDoublePageModeLeft]; // ReaderContentView
+           }
+           break;
+       }
+       case SDVReaderContentViewModeCoverDoublePage:
+       {
+           key = [NSString stringWithFormat:@"%ld-LC",(long)page];// # key
+           contentView = [contentViews objectForKey:key];
+           if (contentView) {
+               [contentView removeFromSuperview];
+               [contentViews removeObjectForKey:key];
+           }
+           //first page and single last page
+           if (page == 1)
+           {
+               //                contentView = [[ReaderContentView alloc] initWithFrame:viewRect fileURL:fileURL page:page password:phrase]; // ReaderContentView
+               contentView = [[SDVReaderContentViewDoublePage alloc] initWithFrame:viewRect fileURL:fileURL page:page password:phrase mode:SDVReaderContentViewDoublePageModeRight]; // ReaderContentView
+           }
+           else if (page == maximumPage)
+           {
+               contentView = [[SDVReaderContentViewDoublePage alloc] initWithFrame:viewRect fileURL:fileURL page:page password:phrase mode:SDVReaderContentViewDoublePageModeLeft]; // ReaderContentView
+           }
+           else
+           {
+               contentView = [[SDVReaderContentViewDoublePage alloc] initWithFrame:viewRect fileURL:fileURL page:page password:phrase]; // ReaderContentView
+           }
+           break;
+       }
         default:
         {
             key = [NSString stringWithFormat:@"%ld",(long)page];// # key
-//            contentView = [contentViews objectForKey:key];
-//            if (contentView) {
-//                [contentView removeFromSuperview];
-//                [contentViews removeObjectForKey:key];
-//            }
-//            contentView = [[ReaderContentView alloc] initWithFrame:viewRect fileURL:fileURL page:page password:phrase]; // ReaderContentView
+           contentView = [contentViews objectForKey:key];
+           if (contentView) {
+               [contentView removeFromSuperview];
+               [contentViews removeObjectForKey:key];
+           }
+           contentView = [[ReaderContentView alloc] initWithFrame:viewRect fileURL:fileURL page:page password:phrase]; // ReaderContentView
             break;
         }
     }
@@ -1034,6 +1034,7 @@
     //initialise with single page per screen
     [self setPagesPerScreen: 1];
     [self setViewMode:SDVReaderContentViewModeSinglePage];
+    // [self setViewMode:SDVReaderContentViewModeCoverDoublePage];
     
     CGRect scrollViewRect = CGRectInset(viewRect, -scrollViewOutset, 0.0f);
     theScrollView = [[UIScrollView alloc] initWithFrame:scrollViewRect]; // All

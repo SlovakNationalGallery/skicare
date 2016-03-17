@@ -67,7 +67,8 @@ static inline CGFloat zoomScaleThatFits(CGSize target, CGSize source, CGFloat bf
 {
 	CGFloat zoomScale = zoomScaleThatFits(self.bounds.size, theContentPage.bounds.size, bugFixWidthInset);
 
-	self.minimumZoomScale = zoomScale; self.maximumZoomScale = 1.0f; // max zoom je 1:1
+	// self.minimumZoomScale = zoomScale; self.maximumZoomScale = 1.0f; // max zoom je 1:1
+	self.minimumZoomScale = zoomScale; self.maximumZoomScale = 3.0f; // max zoom je 1:1
 
 	realMaximumZoom = self.maximumZoomScale; tempMaximumZoom = (realMaximumZoom * ZOOM_FACTOR);
 }
