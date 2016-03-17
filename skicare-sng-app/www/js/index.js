@@ -20,6 +20,7 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         $('body').addClass('initialized');
+        StatusBar.hide();
         createList("skicare.json", "#skicare");
     },
 

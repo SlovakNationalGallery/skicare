@@ -241,7 +241,11 @@
 
 - (void)closeDocument
 {
-	if (printInteraction != nil) [printInteraction dismissAnimated:NO];
+    [idleTimer invalidate];
+    idleTimer = nil;
+
+    
+    if (printInteraction != nil) [printInteraction dismissAnimated:NO];
 
 	[document archiveDocumentProperties]; // Save any ReaderDocument changes
 
@@ -292,7 +296,11 @@
 
 - (void)dealloc
 {
-	[[NSNotificationCenter defaultCenter] removeObserver:self];
+    if (idleTimer) {
+        [idleTimer invalidate];
+        idleTimer = nil;
+    }
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)viewDidLoad
@@ -404,6 +412,11 @@
 	[UIApplication sharedApplication].idleTimerDisabled = NO;
 
 #endif // end of READER_DISABLE_IDLE Option
+    if (idleTimer) {
+        [idleTimer invalidate];
+        idleTimer = nil;
+    }
+
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -504,7 +517,9 @@
 
 - (void)decrementPageNumber
 {
-	if ((maximumPage > minimumPage) && (currentPage != minimumPage))
+    [self resetIdleTimer];
+
+    if ((maximumPage > minimumPage) && (currentPage != minimumPage))
 	{
 		CGPoint contentOffset = theScrollView.contentOffset; // Offset
 
@@ -516,6 +531,8 @@
 
 - (void)incrementPageNumber
 {
+    [self resetIdleTimer];
+
 	if ((maximumPage > minimumPage) && (currentPage != maximumPage))
 	{
 		CGPoint contentOffset = theScrollView.contentOffset; // Offset
@@ -899,7 +916,7 @@
     [idleTimer invalidate];
     idleTimer = nil;
     [self closeDocument]; // Close ReaderViewController
-    [self resetIdleTimer];
+//    [self resetIdleTimer];
 }
 
 //- (UIResponder *)nextResponder {
