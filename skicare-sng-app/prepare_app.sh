@@ -21,7 +21,8 @@ cd $APP_NAME
 # add plugins
 cordova plugin add org.apache.cordova.console
 cordova plugin add org.apache.cordova.device
-cordova plugin add org.apache.cordova.file@1.3.1
+# cordova plugin add org.apache.cordova.file@1.3.1
+cordova plugin add org.apache.cordova.file
 cordova plugin add org.apache.cordova.file-transfer
 cordova plugin add cordova-plugin-media
 cordova plugin add $PLUGIN_URL

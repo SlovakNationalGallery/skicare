@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Variablen setzen
-APP_NAME="SkicareSNG"
+APP_NAME="SkicarCepka"
 
 PLUGIN_ID="de.sitewaerts.cordova.documentviewer"
 #PLUGIN_URL="https://github.com/sitewaerts/cordova-plugin-document-viewer"

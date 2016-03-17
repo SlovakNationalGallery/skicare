@@ -1,4 +1,4 @@
-SNG Prehliadač skicárov a zápisníkov
+SNG Prehliadač skicáru Antona Cepku
 ============================
 
 
